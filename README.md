@@ -7,3 +7,5 @@ where you put in any string in place of "filename". The picture created will be 
 To change objects in the scene read through the Scene class to see how to create spheres, planes and lights. Also take a look at the
 Material class to understand the components of a shape's material. 
 You can also change the camera position and view direction by changing the values where the camera is initialized in the Scene initializer.
+
+There are also some example pictures to show the extent of this program.
