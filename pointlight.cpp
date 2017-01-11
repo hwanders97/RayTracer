@@ -26,6 +26,7 @@ void PointLight::generateLightRay(Local& local, Ray* lray) {
 }
 
 // Shade the object using its material properties and lambert and phong algorithms
+// Help from: http://www.flipcode.com/archives/Raytracing_Topics_Techniques-Part_2_Phong_Mirrors_and_Shadows.shtml
 void PointLight::shade(Local& local, Ray& lray, Ray& inray, Color* lcolor) {
   Material* mat = local.material;
   
