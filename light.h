@@ -17,7 +17,6 @@ public:
   Light(Point lightpos, Color lightcol);
   virtual void generateLightRay(Local& local, Ray* lray) = 0;
   virtual void shade(Local& local, Ray& lray, Ray& inray, Color* lcolor) = 0;
-  Color ComputeLight(Vector direction, Color lightcolor, Vector normal, Vector intersectdir, Vector halfvec, Color diffuse, Color specular, float shininiess, float reflection, float c0, float c1, float c2, float r);
   
 private:
   Point lightposition;
