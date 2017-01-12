@@ -15,5 +15,5 @@ This will create an image named `filename.png`
 
 ### Changing the Image
 
-1. Read through the Scene class – how to create spheres, planes and lights, change camera position and view
-2. Read through the Material class – understand the components of a shape's material (diffuse, specular, etc.)
+1. Scene class – create spheres, planes and lights, change camera position and view
+2. Material class – diffuse, specular, etc.
