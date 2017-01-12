@@ -5,13 +5,13 @@ This is a raytracer that creates realistic images with spheres and planes, refle
 
 ## Running the Program
 
-`cd` into the downloaded directory and run `make` – this will create an executable file name "output"
+`cd` into the downloaded directory and run `make` – this will create an executable file named **output**
 
 
 ```
 ./output 'filename'
 ```
-This will create an image named `'filename.png`
+This will create an image named `filename.png`
 
 ### Changing the Image
 
