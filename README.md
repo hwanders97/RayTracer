@@ -1,4 +1,3 @@
-# RayTracer
 
 <snippet>
   <content><![CDATA[
