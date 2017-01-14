@@ -26,14 +26,6 @@ Scene::Scene(char* name) {
   Material* mirror = new Material(Color(), 1, 0, 20, 1);
   Material* floor = new Material(Color(0.3, 0.3, 0.5), 1, 0, 20, 1);
   
-//  shapes.push_back(new Plane(0, 1, 0, 4.4, new Material(Color(0.4, 0.3, 0.3), 1, 0, 20, 0), true));
-//
-//  shapes.push_back(new Sphere(1.2, -0.8, -4, 2.5, new Material(Color(0.7, 0.7, 0.7), 0.6, 0.4, 20, 0.6), true));
-//  shapes.push_back(new Sphere(-5.5, -0.5, -7, 2, new Material(Color(0.7, 0.7, 1), 0.1, 0.9, 20, 1), true));
-//
-//  lights.push_back(new PointLight(Point(0, 5, -5), Color(0.6, 0.6, 0.6)));
-//  lights.push_back(new PointLight(Point(2, 5, -1), Color(0.7, 0.7, 0.9)));
-  
   // Spheres
   shapes.push_back(new Sphere(7, 2, -7, 3, red, true));
   shapes.push_back(new Sphere(-7, 2, -7, 3, green, true));
