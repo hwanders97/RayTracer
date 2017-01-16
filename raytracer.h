@@ -27,9 +27,10 @@ public:
   bool trace(Ray& ray, int depth, Color* color);
   
 private:
-  void findintersection(Ray& ray, Local* loc, int* num);
+  void findintersection(Ray& ray, Local* loc, int* num, int* hit);
   bool shadowintersection(Ray& lray, int shapenum);
   void generateReflectRay(Local& local, Ray& ray, Ray* reflectRay);
+  void generateRefractRay(float origRefract, Local& local, Ray& ray, Ray* refractRay, int hit);
   vector<Shape*> shapes;
   vector<Light*> lights;
 };
