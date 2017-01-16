@@ -24,7 +24,7 @@ using namespace std;
 class RayTracer {
 public:
   RayTracer(vector<Shape*> shapesarr, vector<Light*> lightsarr);
-  bool trace(Ray& ray, int depth, Color* color);
+  bool trace(Ray& ray, int depth, Color* color, float index);
   
 private:
   void findintersection(Ray& ray, Local* loc, int* num, int* hit);
