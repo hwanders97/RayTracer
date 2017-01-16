@@ -11,8 +11,8 @@
 class Material {
 public:
   Color matcolor;
-  float diffuse, specular, shininess, reflection;
+  float diffuse, specular, shininess, reflection, refraction;
   Material();
-  Material(Color mat, float diff, float spec, float shine, float reflect);
+  Material(Color mat, float diff, float spec, float shine, float reflect, float refract);
 };
 
