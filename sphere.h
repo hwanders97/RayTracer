@@ -15,7 +15,7 @@ public:
   float radius;
   Sphere();
   Sphere(float x, float y, float z, float rad, Material* mat, bool shade);
-  bool intersect(Ray& ray, Local* local, bool shadows);
+  void intersect(Ray& ray, Local* local, bool shadows, int* retval);
 };
 
 
