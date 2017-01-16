@@ -13,7 +13,7 @@ public:
   Vector normal;
   float distance;
   Plane();
-  Plane(float x, float y, float z, float dist, Material* mat, bool shade);
+  Plane(float x, float y, float z, float dist, Material* mat, bool checkshade, bool castshade);
   void intersect(Ray& ray, Local* local, bool shadows, int* retval);
 };
 
