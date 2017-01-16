@@ -88,7 +88,7 @@ void Scene::render() {
   while (Sample::next()) {
     Color color;
     ray = camera->generateRay();
-    raytracer->trace(ray, 1, &color);
+    raytracer->trace(ray, 1, &color, 1);
     film.commit(color);
   }
   film.writeImage(filename);
