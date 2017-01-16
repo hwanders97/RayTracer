@@ -1,6 +1,6 @@
 # Raytracer
 
-This is a raytracer that creates realistic images with spheres and planes, reflections and shadows.
+This is a raytracer that creates realistic images with spheres and planes, reflections, refractions and shadows.
 
 
 ## Running the Program
