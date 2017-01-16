@@ -13,12 +13,18 @@ This is a raytracer that creates realistic images with spheres and planes, refle
 ```
 This will create an image named `filename.png`
 
-### Changing the Image
+## Changing the Image
 
 1. Scene class – create spheres, planes and lights, change camera position and view
 2. Material class – diffuse, specular, etc.
 
-### Image Examples
+## Image Examples
+
+### Mirror Reflections
+
+[<img src="https://raw.github.com/hwanders97/RayTracer/master/fun.png" />](https://raw.github.com/hwanders97/RayTracer/master/fun.png)
+
+### Bubble Refractions
 
 [<img src="https://raw.github.com/hwanders97/RayTracer/master/bubble.png" />](https://raw.github.com/hwanders97/RayTracer/master/bubble.png)
 
