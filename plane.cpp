@@ -10,13 +10,15 @@
 Plane::Plane() : normal(Vector()), distance(0) {
   // Must manually set parent members
   material = new Material();
-  shadow = false;
+  checkshadow = false;
+  castshadow = false;
 }
 
 // Input constructor
-Plane::Plane(float x, float y, float z, float dist, Material* mat, bool shade) : normal(Vector(x, y, z)), distance(dist) {
+Plane::Plane(float x, float y, float z, float dist, Material* mat, bool checkshade, bool castshade) : normal(Vector(x, y, z)), distance(dist) {
   this->material = mat;
-  this->shadow = shade;
+  this->checkshadow = checkshade;
+  this->castshadow = castshade;
 }
 
 // Check for ray intersection and return local information
