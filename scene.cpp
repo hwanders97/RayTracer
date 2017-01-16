@@ -19,28 +19,54 @@ Scene::Scene(char* name) {
   vector<Shape*> shapes;
   vector<Light*> lights;
   
-  //Materials
-  Material* red = new Material(Color(1, 0, 0), 0.5, 0.5, 20, 0);
-  Material* green = new Material(Color(0, 1, 0), 0.5, 0.5, 20, 0);
-  Material* blue = new Material(Color(0, 0, 1), 0.5, 0.5, 20, 1);
-  Material* mirror = new Material(Color(), 1, 0, 20, 1);
-  Material* floor = new Material(Color(0.3, 0.3, 0.5), 1, 0, 20, 1);
+  // Materials
+  //                              matcolor    diff spec shine reflect refract
+  Material* red = new Material(Color(1, 0, 0), 0.5, 0.5, 20, 0, 1);
+  Material* green = new Material(Color(0, 1, 0), 0.5, 0.5, 20, 0, 1);
+  Material* blue = new Material(Color(0, 0, 1), 0.5, 0.5, 20, 0, 1);
+  Material* bubble = new Material(Color(1, 1, 1), 0.2, 0.5, 20, 0, 1.1);
+  Material* mirror = new Material(Color(), 1, 0, 20, 1, 1);
+  Material* floor = new Material(Color(0.7, 0.5, 0.8), 0.6, 0, 20, 0, 1);
+
   
   // Spheres
-  shapes.push_back(new Sphere(7, 2, -7, 3, red, true));
-  shapes.push_back(new Sphere(-7, 2, -7, 3, green, true));
-  shapes.push_back(new Sphere(0, 2, -7, 3, blue, true));
+  // Red row
+  shapes.push_back(new Sphere(10, 2, -15, 1, new Material(Color(0.3, 0, 0), 0.5, 1, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(6, 2, -15, 1, new Material(Color(0.5, 0, 0), 0.5, 0.75, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(2, 2, -15, 1, new Material(Color(0.6, 0, 0), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-2, 2, -15, 1, new Material(Color(0.6, 0, 0), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-6, 2, -15, 1, new Material(Color(0.75, 0, 0), 0.7, 0.3, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-10, 2, -15, 1, new Material(Color(1, 0, 0), 0.9, 0.1, 20, 0, 1), true, true));
+  
+  // Green row
+  shapes.push_back(new Sphere(10, 2, -10, 1, new Material(Color(0, 0.3, 0), 0.5, 1, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(6, 2, -10, 1, new Material(Color(0, 0.5, 0), 0.5, 0.75, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(2, 2, -10, 1, new Material(Color(0, 0.6, 0), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-2, 2, -10, 1, new Material(Color(0, 0.6, 0), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-6, 2, -10, 1, new Material(Color(0, 0.75, 0), 0.7, 0.3, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-10, 2, -10, 1, new Material(Color(0, 1, 0), 0.9, 0.1, 20, 0, 1), true, true));
+  
+  // Blue row
+  shapes.push_back(new Sphere(10, 2, -5, 1, new Material(Color(0, 0, 0.3), 0.5, 1, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(6, 2, -5, 1, new Material(Color(0, 0, 0.5), 0.5, 0.75, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(2, 2, -5, 1, new Material(Color(0, 0, 0.6), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-2, 2, -5, 1, new Material(Color(0, 0, 0.6), 0.5, 0.5, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-6, 2, -5, 1, new Material(Color(0, 0, 0.75), 0.7, 0.3, 20, 0, 1), true, true));
+  shapes.push_back(new Sphere(-10, 2, -5, 1, new Material(Color(0, 0, 1), 0.9, 0.1, 20, 0, 1), true, true));
+  
+  
+  //Bubble spheres
+  shapes.push_back(new Sphere(0, 6.5, -3, 2.7, bubble, true, true));
   
   
   // Mirror spheres
-  shapes.push_back(new Sphere(0, 6, -15, 5, mirror, true));
-//  shapes.push_back(new Sphere(-15, 6, -7, 5, mirror, true));
-//  shapes.push_back(new Sphere(15, 6, -7, 5, mirror, true));
-//  shapes.push_back(new Sphere(0, 6, 2, 5, mirror, true));
+  shapes.push_back(new Sphere(-15, 6, -20, 7, mirror, true, true));
   
   
   // Planes
-  shapes.push_back(new Plane(0, 1, 0, 2, floor, true));
+  // Floor
+  shapes.push_back(new Plane(0, 1, 0, 2, floor, true, true));
+
 
   
   // Lights
