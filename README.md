@@ -26,7 +26,7 @@ This will create an image named `filename.png`
 
 ### Bubble Refractions
 
-[<img src="https://raw.github.com/hwanders97/RayTracer/master/bubble.png" />](https://raw.github.com/hwanders97/RayTracer/master/bubble.png)
+[<img src="https://raw.github.com/hwanders97/RayTracer/master/bubbleroom.png" />](https://raw.github.com/hwanders97/RayTracer/master/bubble.png)
 
 
 
